@@ -5,16 +5,15 @@ import { connect } from 'react-redux';
 class SearchResults extends Component {
 
     renderNews(data){
-        const title = data.title;
-        const index = data.created_at_i;
-        const author = data.author;
-        const url = data.url;
+        const { title, index, author, url, points, num_comments } = data;
 
         return (
             <tr key={index}>
                 <td>{title}</td>
                 <td>{author}</td>
-                <td><a href={url}>{url}</a></td>
+                <td><a href={url} target="_blank" rel="noopener noreferrer">{url}</a></td>
+                <td>{points}</td>
+                <td>{num_comments}</td>
             </tr>
         )
     }
@@ -27,7 +26,8 @@ class SearchResults extends Component {
                 <th>Title</th>
                 <th>Author</th>
                 <th>URL</th>
-                <th>Humidity (%)</th>
+                <th>Points</th>
+                <th># of Comments</th>
               </tr>
             </thead>
             <tbody>
