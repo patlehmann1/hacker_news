@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.app_wrapper {
     margin: 20px 0;
     background-color: white;
     min-height: 75vh;
@@ -46,4 +46,25 @@ header {
 
 svg {
     height: 150px;
+}
+
+.search_bar {
+    margin: 0px 20px;
+}
+
+.footer_text {
+    color: white;
+    text-align: center;
+}
+
+.footer_link {
+    color: white;
+}
+
+.footer_link:hover {
+    color: rgb(187, 187, 187);
+}
+
+.footer_link:focus {
+    color: rgb(0, 204, 211);
 }
