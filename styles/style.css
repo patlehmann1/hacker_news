@@ -1,0 +1,74 @@
+body {
+    color: darkslategray !important;
+    background-color: darkslategray !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app_wrapper {
+    margin: 20px 0;
+    background-color: white;
+    min-height: 75vh;
+    border-radius: 10px;
+}
+
+.search_results {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.recent_search {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+td, th {
+    text-align: center !important;
+    overflow: hidden;
+}
+
+header {
+    font-family: 'Press Start 2P', cursive;
+    padding: 40px 0px;
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+svg {
+    height: 150px;
+}
+
+.search_bar {
+    margin: 0px 20px;
+}
+
+footer {
+    margin-bottom: 20px;
+}
+
+.footer_text {
+    color: white;
+    text-align: center;
+}
+
+.footer_link {
+    color: white;
+}
+
+.footer_link:hover {
+    color: rgb(187, 187, 187);
+}
+
+.footer_link:focus {
+    color: rgb(0, 204, 211);
+}
