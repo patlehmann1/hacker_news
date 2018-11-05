@@ -7,7 +7,7 @@ body {
 .container {
     margin: 20px 0;
     background-color: white;
-    min-height: 100vh;
+    min-height: 75vh;
     border-radius: 10px;
 }
 
@@ -28,12 +28,13 @@ body {
 }
 
 table {
-    padding: 0px 20px;
+    table-layout: fixed;
+    width: 100%;
 }
 
 td, th {
-    vertical-align: middle !important;
     text-align: center !important;
+    overflow: hidden;
 }
 
 header {
@@ -45,9 +46,4 @@ header {
 
 svg {
     height: 150px;
-}
-
-td:first-of-type, td:first-of-type > div {
-    height: 200px;
-    width: 250px;
 }
