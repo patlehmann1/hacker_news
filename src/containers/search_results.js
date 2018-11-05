@@ -20,7 +20,7 @@ class SearchResults extends Component {
 
     render() {
         return (
-        <div>
+        <div className="search_results">
           <table className="table table-hover">
             <thead>
               <tr>

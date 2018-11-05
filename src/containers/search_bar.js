@@ -19,9 +19,8 @@ class SearchBar extends Component {
         this.setState({ query: event.target.value });
     };
 
-    handleButtonClick(event) {
-        event.preventDefault();
-        this.props.fetchNews(event.target.value);
+    handleButtonClick(query) {
+        this.props.fetchNews(query);
     }
 
     handleFormSubmit(event) {
@@ -33,26 +32,32 @@ class SearchBar extends Component {
     render() {
         return (
             <div>
-            <form onSubmit={this.handleFormSubmit} className="input-group">
-                <input
-                    placeholder="Get the latest from Hacker News based on your search"
-                    name="main-search"
-                    value={this.state.query}
-                    onChange={this.handleInputChange}
-                    className="form-control"
-                />
-                <span className="input-group-btn">
-                    <button type="submit" className="btn btn-secondary">Submit</button>
-                </span>
-            </form>
-            <div className="recent_search"> 
-                <h5>Recent Searches</h5>
-                <span> 
-                {!this.props.search.length ? "Search for a term to get started" : 
-                this.props.search.map(query => <button className="btn btn-primary" value={this.state.query} 
-                onClick={this.handleButtonClick}>{query}</button> )}  
-                </span>
-            </div>
+                <div className="search_bar">
+                <form onSubmit={this.handleFormSubmit} className="input-group">
+                    <input
+                        placeholder="Get the latest from Hacker News based on your search"
+                        name="main-search"
+                        value={this.state.query}
+                        onChange={this.handleInputChange}
+                        className="form-control"
+                    />
+                    <span className="input-group-btn">
+                        <button type="submit" className="btn btn-secondary">Submit</button>
+                    </span>
+                </form>
+                </div>
+                <div className="recent_search"> 
+                    <h5>Recent Searches</h5>
+                    <span> 
+                    {!this.props.search.length ? "Search for a term and see your recent searches here." : 
+                    this.props.search.map(query => 
+                    <button 
+                    className="btn btn-primary" 
+                    onClick={this.handleButtonClick.bind(this, query)}>{query}
+                    </button> 
+                    )}  
+                    </span>
+                </div>
             </div>
         );
     };
