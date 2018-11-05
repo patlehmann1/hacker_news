@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchNews } from '../actions/index';
+import { getNews } from '../actions/index';
 
 
 class SearchBar extends Component {
@@ -20,12 +20,12 @@ class SearchBar extends Component {
     };
 
     handleButtonClick(query) {
-        this.props.fetchNews(query);
+        this.props.getNews(query);
     }
 
     handleFormSubmit(event) {
         event.preventDefault();
-        this.props.fetchNews(this.state.query);
+        this.props.getNews(this.state.query);
         this.setState({ query: '' });
     };
 
@@ -49,9 +49,9 @@ class SearchBar extends Component {
                 <div className="recent_search"> 
                     <h5>Recent Searches</h5>
                     <span> 
-                    {!this.props.search.length ? "Search for a term and see your recent searches here." : 
-                    this.props.search.map(query => 
-                    <button 
+                    {!this.props.searches.length ? "Search for a term and see your recent searches here." : 
+                    this.props.searches.map(query => 
+                    <button
                     className="btn btn-primary" 
                     onClick={this.handleButtonClick.bind(this, query)}>{query}
                     </button> 
@@ -63,12 +63,13 @@ class SearchBar extends Component {
     };
 };
 
-function mapStateToProps({ news, search }) {
-    return { news, search };
-}
+const mapStateToProps = ({ news }) => ({ 
+    searches: Object.keys(news.searches),
+    news: news
+  });
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchNews }, dispatch);
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({ getNews }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

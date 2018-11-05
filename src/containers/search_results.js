@@ -32,7 +32,7 @@ class SearchResults extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.props.news.map(this.renderNews)}
+              {this.props.news.news.map(this.renderNews)}
             </tbody>
           </table>
         </div>
@@ -41,8 +41,8 @@ class SearchResults extends Component {
 
 };
 
-    function mapStateToProps({ news, search }) {
-        return { news, search };
+    function mapStateToProps({ news }) {
+        return { news };
     }
 
 export default connect(mapStateToProps)(SearchResults);
