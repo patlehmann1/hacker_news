@@ -12,4 +12,4 @@ export function fetchNews(query) {
         type: FETCH_NEWS,
         payload: request
     };
-}
+};

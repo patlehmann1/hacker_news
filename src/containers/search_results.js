@@ -20,6 +20,7 @@ class SearchResults extends Component {
 
     render() {
         return (
+        <div>
           <table className="table table-hover">
             <thead>
               <tr>
@@ -34,13 +35,14 @@ class SearchResults extends Component {
               {this.props.news.map(this.renderNews)}
             </tbody>
           </table>
+        </div>
         );
     };
 
 };
 
-    function mapStateToProps({ news }) {
-        return { news };
+    function mapStateToProps({ news, search }) {
+        return { news, search };
     }
 
 export default connect(mapStateToProps)(SearchResults);

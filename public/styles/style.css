@@ -7,6 +7,14 @@ body {
     background-color: white;
 }
 
+.recent_search {
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
+}
+
 td, th {
     vertical-align: middle !important;
     text-align: center !important;
