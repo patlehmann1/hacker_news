@@ -1,4 +1,5 @@
 import React from 'react';
+import './main_heading.scss';
 
 const MainHeading = () => {
     return (

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getNews } from '../actions/index';
+import { getNews } from '../../actions/index';
+import './search_bar.scss';
 
 
 class SearchBar extends Component {
@@ -50,8 +51,9 @@ class SearchBar extends Component {
                     <h5>Recent Searches</h5>
                     <span> 
                     {!this.props.searches.length ? "Search for a term and see your recent searches here." : 
-                    this.props.searches.map(query => 
+                    this.props.searches.map((query, i) => 
                     <button
+                    key={i}
                     className="btn btn-primary" 
                     onClick={this.handleButtonClick.bind(this, query)}>{query}
                     </button> 
