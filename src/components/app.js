@@ -8,9 +8,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-      <MainHeading />
-      <SearchBar />
-      <SearchResults />
+        <MainHeading />
+        <SearchBar />
+        <SearchResults />
       </div>
     );
   }

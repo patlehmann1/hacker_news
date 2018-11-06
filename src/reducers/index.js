@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { SET_NEWS, SET_LOADING, SET_SEARCH } from '../actions';
 
 const newsReducer = (state = { loading: false, news: [], searches: {} }, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case SET_NEWS:
       return { ...state, news: action.payload };
 

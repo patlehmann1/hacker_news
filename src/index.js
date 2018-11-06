@@ -13,11 +13,11 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-  <div>
-  <div className='app_wrapper'>
-    <App />
-  </div>
-  <Footer />
-  </div>
+    <div>
+      <div className='app_wrapper'>
+        <App />
+      </div>
+      <Footer />
+    </div>
   </Provider>
   , document.querySelector('.container'));

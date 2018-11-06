@@ -3,9 +3,9 @@ import axios from 'axios';
 const url = `https://hn.algolia.com/api/v1`;
 
 const SET_LOADING = 'SET LOADING';
-const SET_NEWS    = 'SET NEWS';
-const GET_NEWS    = 'GET NEWS';
-const SET_SEARCH  = 'SET SEARCH';
+const SET_NEWS = 'SET NEWS';
+const GET_NEWS = 'GET NEWS';
+const SET_SEARCH = 'SET SEARCH';
 
 const setLoading = loading => ({
   type: SET_LOADING,
