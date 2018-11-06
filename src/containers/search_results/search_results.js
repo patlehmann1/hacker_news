@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Spinner from '../../components/spinner';
+import Spinner from '../../components/spinner/spinner';
 import './search_results.scss';
 
 
