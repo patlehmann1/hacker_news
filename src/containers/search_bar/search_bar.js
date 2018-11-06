@@ -10,21 +10,17 @@ class SearchBar extends Component {
         super(props);
          
         this.state = { query: '' };
-
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        this.handleButtonClick = this.handleButtonClick.bind(this);
     };
 
-    handleInputChange(event) {
+    handleInputChange = (event) => {
         this.setState({ query: event.target.value });
     };
 
-    handleButtonClick(query) {
+    handleButtonClick = (query) => {
         this.props.getNews(query);
     }
 
-    handleFormSubmit(event) {
+    handleFormSubmit = (event) => {
         event.preventDefault();
         this.props.getNews(this.state.query);
         this.setState({ query: '' });
