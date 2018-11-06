@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/hacker_news/static/css/main.7962f211.chunk.css"
   },
   {
-    "revision": "867c99f0c2b7a99522f7320e4fff3349",
+    "revision": "3f863777687c475d01633775ce4e04bf",
     "url": "/hacker_news/index.html"
   }
 ];
